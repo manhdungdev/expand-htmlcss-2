@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    text-rendering: optimizeSpeed;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 7000px;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #143C3C;
+    --primary-black: #152427;
+    --primary-gray: #575D5E;
+}
+
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 1140px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__title {
+    color: #000;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-left: 8px;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 173px;
+    height: 57px;
+    border-radius: 40px;
+    border: 1.5px solid var(--primary-color);
+    background: var(--primary-color);
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55556;
+}
+
+/* Header */
+.header {
+    padding-top: 20px;
+    font-family: "Public Sans", sans-serif;
+}
+
+.header--sticky{
+    position: sticky;
+    top: -20px;
+}
+
+.header__body {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav__list {
+    display: flex;
+    margin-right: 69px;
+}
+
+.nav__item--active .nav__link{
+    font-weight: 600;
+    color: var(--primary-black)
+}
+
+.nav__item--active .nav__link::after {
+    position: absolute;
+    bottom: 0;
+    left: 19px;
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.nav__link {
+    position: relative;
+    display: inline-block;
+    padding: 6px 19px;
+    color: var(--primary-gray);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5556;
+}
+
+.nav__link::before{
+    display: block;
+    content: attr(title);
+    font-weight: 600;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+.nav__link:hover{
+    color: var(--primary-black);
+    font-weight: 600;
+}
