@@ -24,7 +24,7 @@ body {
     --header-height: 57px;
     --herder-padding: 26px;
     --header-sticky: 20px;
-    --hero-height: 1px;
+    --hero-line: 1px;
 }
 
 
@@ -83,6 +83,35 @@ svg {
 .btn:hover {
     cursor: pointer;
     opacity: 0.9;
+}
+
+.deco__flower {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.deco__ball {
+    position: absolute;
+    left: -40px;
+    top: 11px;
+}
+
+.deco {
+    position: absolute;
+    top: 18px;
+    left: -170px;
+}
+
+.deco--rotate {
+    position: absolute;
+    right: 44px;
+    bottom: 14px;
+}
+
+.deco--rotate .deco__flower {
+    transform: rotate(180deg);
 }
 
 /* Header */
@@ -156,11 +185,10 @@ svg {
 
 /* Hero */
 .hero {
-
     font-family: "Public Sans", sans-serif;
 }
 
-.hero__line{
+.hero__line {
     height: 1px;
     background: linear-gradient(90deg, #FFF 0%, #DDDCDC 51.09%, rgba(212, 212, 212, 0.00) 99.68%);
 }
@@ -168,7 +196,7 @@ svg {
 .hero__body {
     display: flex;
     justify-content: space-between;
-    height: calc(100vh - var(--header-height) - var(--header-sticky) - var(--herder-padding) - var(--hero-height));
+    min-height: calc(100vh - var(--header-height) - var(--header-sticky) - var(--herder-padding) - var(--hero-line));
     padding-right: 25px;
 }
 
@@ -208,6 +236,25 @@ svg {
     border: 1px solid transparent;
     background: #fff;
     cursor: pointer;
+
+}
+
+.hero__watch:hover .hero__watch-circle {
+    transform: rotate(180deg);
+    background: var(--primary-color);
+
+}
+
+.hero__watch:hover .hero__watch-circle::before {
+    border-color: #83a17d;
+}
+
+.hero__watch:hover .hero__watch-text {
+    color: #83a17d;
+}
+
+.hero__watch:hover .hero__watch-icon {
+    transform: rotate(180deg);
 }
 
 .hero__watch-circle {
@@ -220,6 +267,7 @@ svg {
     height: 44px;
     border-radius: 50%;
     background: #83A17D;
+    transition: all 0.25s;
 }
 
 .hero__watch-circle::before {
@@ -280,33 +328,15 @@ svg {
     align-self: flex-end;
 }
 
-.hero__deco-flower {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
+/* Brands */
+.brands {
+    margin: 42px 0;
+    height: 201px;
 }
 
-.hero__deco-ball {
-    position: absolute;
-    left: -40px;
-    top: 11px;
-}
-
-
-
-.hero__deco-wrap {
-    position: absolute;
-    top: 18px;
-    left: -170px;
-}
-
-.hero__deco-wrap--rotate {
-    position: absolute;
-    right: 44px;
-    bottom: 14px;
-}
-
-.hero__deco-wrap--rotate .hero__deco-flower {
-    transform: rotate(180deg);
+.brands__body {
+    display: flex;
+    padding: 0 121px;
+    background: #E2EDDF;
+    border-radius: 999px;
 }
