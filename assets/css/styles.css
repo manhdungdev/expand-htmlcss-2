@@ -25,6 +25,8 @@ body {
     --herder-padding: 26px;
     --header-sticky: 20px;
     --hero-line: 1px;
+
+    --hero-height: calc(100vh - var(--header-height) - var(--header-sticky) - var(--herder-padding) - var(--hero-line));
 }
 
 
@@ -100,8 +102,8 @@ svg {
 
 .deco {
     position: absolute;
-    top: 18px;
-    left: -170px;
+    top: 2%;
+    left: -25%;
 }
 
 .deco--rotate {
@@ -196,7 +198,7 @@ svg {
 .hero__body {
     display: flex;
     justify-content: space-between;
-    min-height: calc(100vh - var(--header-height) - var(--header-sticky) - var(--herder-padding) - var(--hero-line));
+    min-height: var(--hero-height);
     padding-right: 25px;
 }
 
@@ -314,12 +316,12 @@ svg {
     margin: auto 0;
     display: flex;
     gap: 20px;
-    height: 543px;
+    height: 87%;
 }
 
 .hero__image {
     width: 202px;
-    height: 466px;
+    height: 86%;
     border-radius: 999px;
     object-fit: cover;
 }
@@ -331,12 +333,58 @@ svg {
 /* Brands */
 .brands {
     margin: 42px 0;
-    height: 201px;
 }
 
 .brands__body {
     display: flex;
+    align-items: center;
     padding: 0 121px;
     background: #E2EDDF;
     border-radius: 999px;
+    height: 201px;
+}
+
+.brands-item__google {
+    color: var(--primary-color);
+    font-size: 3.1rem;
+    font-weight: 500;
+}
+
+.brands-slack {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 47px;
+    color: var(--primary-color);
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.brands-agworld {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-left: 51px;
+    color: #163C35;
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+.brands-riotinto {
+    margin-left: 64px;
+    color: var(--primary-color);
+    font-family: Sonsie One;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+.brands-heroku {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: 63px;
+    color: var(--primary-color);
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1995rem;
 }
