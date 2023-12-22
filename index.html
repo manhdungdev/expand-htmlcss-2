@@ -32,20 +32,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Public+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header header--sticky">
         <div class="container">
             <div class="header__body">
                 <!-- Logo -->
                 <a href="#">
                     <span class="logo">
-                        <img src="assets/img/logo.jpg" alt="Modulars" class="logo__img">
+                        <img loading="lazy" src="assets/img/logo.jpg" alt="Modulars" class="logo__img">
                         <p class="logo__title">MODULARS</p>
                     </span>
                 </a>
@@ -71,6 +72,49 @@
             </div>
         </div>
     </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero__container">
+            <div class="hero__line"></div>
+            <section class="hero__body">
+                <div class="hero__content">
+                    <h1 class="hero__heading">We’re a creative design agency.</h1>
+                    <p class="hero__desc">A brilliant, modular agency template for startup’s build yours toady.</p>
+                    <div class="hero__cta-group">
+                        <button class="btn">Get in touch</button>
+                        <button class="hero__watch">
+                            <div class="hero__watch-circle">
+                                <img loading="lazy" src="assets/icon/play.svg" alt="" class="hero__watch-icon">
+                            </div>
+                            <span class="hero__watch-text">Watch Video</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero__media">
+                    <figure class="hero__deco-wrap">
+                        <div class="hero__deco-flower">
+                            <img loading="lazy" src="assets/icon/ball.svg" alt="" class="hero__deco-ball">
+                            <img loading="lazy" src="assets/icon/line.svg" alt="" class="hero__deco-line">
+                        </div>
+                    </figure>
+                    <figure class="hero__deco-wrap--rotate ">
+                        <div class="hero__deco-flower">
+                            <img loading="lazy" src="assets/icon/ball.svg" alt="" class="hero__deco-ball">
+                            <img loading="lazy" src="assets/icon/line.svg" alt="" class="hero__deco-line">
+                        </div>
+                    </figure>
+                    <div class="hero__bg-circle"></div>
+                    <div class="hero__images">
+                        <img loading="lazy" src="assets/img/hero-1.jpg" alt="Study room 1" class="hero__image">
+                        <img loading="lazy" src="assets/img/hero-2.jpg" alt="Study room 2" class="hero__image">
+                        <img loading="lazy" src="assets/img/hero-3.jpg" alt="Study room 3" class="hero__image">
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </section>
 </body>
 
 </html>

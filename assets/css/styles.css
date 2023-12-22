@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -18,6 +20,11 @@ body {
     --primary-color: #143C3C;
     --primary-black: #152427;
     --primary-gray: #575D5E;
+
+    --header-height: 57px;
+    --herder-padding: 26px;
+    --header-sticky: 20px;
+    --hero-height: 1px;
 }
 
 
@@ -64,21 +71,29 @@ svg {
     min-width: 173px;
     height: 57px;
     border-radius: 40px;
-    border: 1.5px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     background: var(--primary-color);
     color: #FFF;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.55556;
+    font-family: "Public Sans", sans-serif;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 /* Header */
 .header {
     padding-top: 20px;
     font-family: "Public Sans", sans-serif;
+    background: #fff;
+    z-index: 2;
 }
 
-.header--sticky{
+.header--sticky {
     position: sticky;
     top: -20px;
 }
@@ -86,7 +101,7 @@ svg {
 .header__body {
     display: flex;
     align-items: center;
-    padding: 8px 0;
+    padding: 13px 0;
 }
 
 .nav {
@@ -98,7 +113,7 @@ svg {
     margin-right: 69px;
 }
 
-.nav__item--active .nav__link{
+.nav__item--active .nav__link {
     font-weight: 600;
     color: var(--primary-black)
 }
@@ -124,7 +139,7 @@ svg {
     line-height: 1.5556;
 }
 
-.nav__link::before{
+.nav__link::before {
     display: block;
     content: attr(title);
     font-weight: 600;
@@ -134,7 +149,164 @@ svg {
 }
 
 
-.nav__link:hover{
+.nav__link:hover {
     color: var(--primary-black);
     font-weight: 600;
+}
+
+/* Hero */
+.hero {
+
+    font-family: "Public Sans", sans-serif;
+}
+
+.hero__line{
+    height: 1px;
+    background: linear-gradient(90deg, #FFF 0%, #DDDCDC 51.09%, rgba(212, 212, 212, 0.00) 99.68%);
+}
+
+.hero__body {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - var(--header-height) - var(--header-sticky) - var(--herder-padding) - var(--hero-height));
+    padding-right: 25px;
+}
+
+.hero__content {
+    width: 35%;
+    flex-shrink: 0;
+}
+
+.hero__heading {
+    max-width: 368px;
+    margin-top: 103px;
+    color: var(--primary-black);
+    font-family: Public Sans;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero__desc {
+    margin-top: 20px;
+    color: var(--primary-gray);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55556;
+}
+
+.hero__cta-group {
+    display: flex;
+    gap: 38px;
+    margin-top: 42px;
+}
+
+.hero__watch {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border: 1px solid transparent;
+    background: #fff;
+    cursor: pointer;
+}
+
+.hero__watch-circle {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #83A17D;
+}
+
+.hero__watch-circle::before {
+    position: absolute;
+    left: -7px;
+    display: inline-block;
+    content: "";
+    width: 29px;
+    height: 58px;
+    border: 4px solid var(--primary-color);
+    border-right: 0;
+    border-top-left-radius: 29px;
+    border-bottom-left-radius: 29px;
+}
+
+.hero__watch-text {
+    color: #152427;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66667;
+}
+
+.hero__media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 646px;
+}
+
+.hero__bg-circle {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: #4DBB9A;
+    filter: blur(137px);
+}
+
+.hero__images {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    display: flex;
+    gap: 20px;
+    height: 543px;
+}
+
+.hero__image {
+    width: 202px;
+    height: 466px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+.hero__image:nth-child(2) {
+    align-self: flex-end;
+}
+
+.hero__deco-flower {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero__deco-ball {
+    position: absolute;
+    left: -40px;
+    top: 11px;
+}
+
+
+
+.hero__deco-wrap {
+    position: absolute;
+    top: 18px;
+    left: -170px;
+}
+
+.hero__deco-wrap--rotate {
+    position: absolute;
+    right: 44px;
+    bottom: 14px;
+}
+
+.hero__deco-wrap--rotate .hero__deco-flower {
+    transform: rotate(180deg);
 }
