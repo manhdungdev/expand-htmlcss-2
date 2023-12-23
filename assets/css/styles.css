@@ -168,12 +168,14 @@ svg {
 }
 
 .arrow {
+    --bg-color: #6A8383;
+
     position: relative;
     display: inline-block;
     height: 2px;
     width: 25px;
     margin-left: 26px;
-    background: #6A8383;
+    background: var(--bg-color);
     cursor: pointer;
     transition: all 0.25s;
 }
@@ -187,10 +189,11 @@ svg {
     background: transparent;
     border-width: 3px 3px 0 0;
     border-style: solid;
-    border-color: #6A8383;
+    border-color: var(--bg-color);
     transform: rotate(45deg);
     right: 0;
     top: -4px;
+    transition: all 0.25s;
 }
 
 .line-clamp {
@@ -481,6 +484,46 @@ svg {
 .service {
     margin-top: 50px;
     padding: 56px;
+}
+
+.service__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service__action {
+    display: flex;
+    gap: 17px;
+}
+
+.service__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    border: 1px solid transparent;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #E2EDDF;
+    cursor: pointer;
+}
+
+.service__btn:hover {
+    background: #143C3C;
+}
+
+.service__btn:hover .service__arrow {
+    --bg-color: #E2EDDF;
+}
+
+.service__arrow {
+    margin-left: 0;
+}
+
+.service__arrow--reverse {
+    transform: rotate(180deg);
+    --bg-color: #143C3C;
 }
 
 .service__list {
@@ -1002,14 +1045,21 @@ svg {
 
 .blog-item {
     border-radius: 40px;
+    transition: all 0.25s;
 }
 
 .blog-item:hover {
     box-shadow: 0px 12px 74px 0px rgba(91, 91, 91, 0.25);
+    transform: translateY(-16px);
 }
 
 .blog-item:hover .blog-item__content {
     border: transparent;
+}
+
+.blog-item:hover .blog-item__tag {
+    background: #143C3C;
+    color: #fff;
 }
 
 .blog-item__thumb {
@@ -1039,6 +1089,7 @@ svg {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.2;
+    transition: all 0.25s;
 }
 
 .blog-item__heading {
