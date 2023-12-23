@@ -11,7 +11,6 @@ html {
 }
 
 body {
-    height: 7000px;
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
 }
@@ -1084,7 +1083,7 @@ svg {
 }
 
 .footer__data {
-    width: 44%;
+    width: 50%;
 }
 
 .footer__contact {
@@ -1098,21 +1097,117 @@ svg {
 }
 
 .footer__form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 90%;
     margin-top: 25px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #6A8383;
 }
 
 .footer__input {
-    width: 250px;
+    width: 360px;
     padding: 12px 24px 12px 12px;
-    border: 1px solid #143C3C;
+    border: 1px solid #219191;
     background: transparent;
     color: #fff;
     outline: none;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
+    border-radius: 4px;
 }
 
 .footer__input::placeholder {
     color: #6A8383;
-    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.footer__btn {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.footer__btn:hover .footer__arrow {
+    width: 35px;
+}
+
+.footer__arrow {
+    margin: 0;
+}
+
+.footer__socials {
+    display: flex;
+    margin-top: 47px;
+    gap: 22px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid #265252;
+    color: #fff;
+    background: transparent;
+    transition: all 0.25s;
+}
+
+.footer-social:hover {
+    background: #A75325;
+    border-color: #A75325;
+}
+
+.footer__contact {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    white-space: nowrap;
+}
+
+.footer-col__heading {
+    margin-top: 22px;
+    color: #fff;
+    font-family: Public Sans;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5556;
+}
+
+.footer-col__list {
+    margin-top: 6px;
+}
+
+.footer-col__link {
+    margin-bottom: 36px;
+    color: #6A8383;
+    font-family: Public Sans;
+    font-weight: 500;
+    line-height: 2.25;
+}
+
+.footer-col__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.footer__line {
+    margin-top: 45px;
+    height: 1px;
+    background: linear-gradient(90deg, #143C3C 2.28%, #295A5A 55.65%, rgba(38, 82, 82, 0.00) 102.06%);
+}
+
+.footer__copyright-text {
+    padding: 24px 0 16px;
+    color: #9fd3d3;
+    text-align: center;
+    font-size: 1.8rem;
     font-weight: 600;
 }
