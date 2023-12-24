@@ -168,7 +168,7 @@ svg {
 }
 
 .arrow {
-    --bg-color: #6A8383;
+    --bg-color: #fff;
 
     position: relative;
     display: inline-block;
@@ -184,15 +184,15 @@ svg {
     position: absolute;
     display: inline-block;
     content: "";
-    height: 11px;
-    width: 11px;
+    height: 8px;
+    width: 8px;
     background: transparent;
     border-width: 3px 3px 0 0;
     border-style: solid;
     border-color: var(--bg-color);
     transform: rotate(45deg);
-    right: 0;
-    top: -4px;
+    right: 0px;
+    top: -3px;
     transition: all 0.25s;
 }
 
@@ -507,14 +507,16 @@ svg {
     border-radius: 50%;
     background: #E2EDDF;
     cursor: pointer;
+    transition: all 0.25s;
 }
 
 .service__btn:hover {
     background: #143C3C;
 }
 
-.service__btn:hover .service__arrow {
-    --bg-color: #E2EDDF;
+.service__arrow,
+.service__arrow--reverse{
+    --bg-color: #000;
 }
 
 .service__arrow {
@@ -523,7 +525,10 @@ svg {
 
 .service__arrow--reverse {
     transform: rotate(180deg);
-    --bg-color: #143C3C;
+}
+
+.service__btn:hover .service__arrow {
+    --bg-color: #fff;
 }
 
 .service__list {
@@ -832,7 +837,6 @@ svg {
     font-size: 1.8rem;
     font-weight: 400;
     text-decoration: underline;
-    transition: all 0.25s;
 }
 
 .process__desc {
@@ -1185,6 +1189,7 @@ svg {
 }
 
 .footer__btn:hover .footer__arrow {
+    --bg-color: #6A8383;
     width: 35px;
 }
 
